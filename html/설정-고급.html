@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="Author" content="" />
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1,user-scalable=no" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+<!--[if lt IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+<![endif]-->
+<title>HMI 파워닉스</title>
+<link rel="stylesheet" href="../css/style.css" />
+<script src="../js/jquery-1.9.1.min.js"></script>
+<script src="../js/ui.js" ></script>
+</head>
+
+<body>
+<div id="wrapper">
+    <header id="header" class="clearfix"><!-- header -->
+        <div class="headerTop">
+            <h1><a href="#"><img src="../img/img_logo.png" alt="파워닉스"></a></h1>
+            <aside class="adminInfo clearfix">
+                <p class="adminLine"><span class="user"></span><a href="#">LOGOUT</a></p>
+                <p class="date">2018.03.12 | 13:45:32</p>
+            </aside>
+            <nav id="gnb">
+                <ul class="clearfix">
+                    <li>
+                        <a href="#">메인</a>
+                    </li>
+                    <li>
+                        <a href="#">감시</a>
+                        <div class="subNav">
+                            <ul class="clearfix">
+                                <li><a href="#">데이터</a></li>
+                                <li><a href="#">고조파</a></li>
+                                <li><a href="#">파워</a></li>
+                                <li><a href="#">온도</a></li>
+                                <li><a href="#">그래프</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">설정</a>
+                        <div class="subNav">
+                            <ul class="clearfix">
+                                <li><a href="#">일반</a></li>
+                                <li><a href="#">추가</a></li>
+                                <li><a href="#">통신</a></li>
+                                <li class="active"><a href="#">고급</a></li>
+                                <li><a href="#">고조파</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">기록</a>
+                        <div class="subNav">
+                            <ul class="clearfix">
+                                <li><a href="#">실시간</a></li>
+                                <li><a href="#">과거</a></li>
+                                <li><a href="#">동작</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">정보</a>
+                        <div class="subNav">
+                            <ul class="clearfix">
+                                <li><a href="#">시스템</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header><!-- //header -->
+    <section id="contentsArea">
+        <div class="icoInfo clearfix">
+            <ul class="clearfix">
+                <li><a href="#"><img src="../img/ico_info01.png" alt="">AHF</a></li>
+                <li><a href="#"><img src="../img/ico_info02.png" alt="">SVG</a></li>
+                <li><a href="#"><img src="../img/ico_info03.png" alt="">감시</a></li>
+            </ul>
+        </div>
+        <ul class="selectMode">
+            <li><input type="checkbox" id="ahf"><label for="ahf">AHF Online</label></li>
+            <li><input type="checkbox" id="svg" checked><label for="svg">SVG Offline</label></li>
+        </ul>
+        <article id="contents"> <!-- contents -->
+            <div class="setupArea">
+                <form name="" method="post" action="">
+                    <ul class="setUp">
+                        <li>
+                            <span class="tit">
+                                <label for="">Inductor Current Config</label>
+                            </span>
+                            <span class="con">
+                                <select name="" id="">
+                                    <option value="">Capacitive</option>
+                                </select>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="tit">
+                                <label for="">LVRT</label>
+                            </span>
+                            <span class="con">
+                                <input type="text" value="Disable">
+                            </span>
+                        </li>
+                        <li>
+                            <span class="tit">
+                                <label for="">Hybrid Parameter</label>
+                            </span>
+                            <span class="con">
+                                <input type="text" value="40.0">
+                            </span>
+                        </li>
+                        <li>
+                            <span class="tit">
+                                <label for="">Controller Parameter</label>
+                            </span>
+                            <span class="con">
+                                <input type="text" value="10.0">
+                            </span>
+                        </li>
+                        <li>
+                            <span class="tit">
+                                <label for="">Voltage Class</label>
+                            </span>
+                            <span class="con">
+                                <select name="" id="">
+                                    <option value="">380 / 400 / 415</option>
+                                </select>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="tit">
+                                <label for="">주파수</label>
+                            </span>
+                            <span class="con">
+                                <select name="" id="">
+                                    <option value="">60Hz</option>
+                                </select>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="tit">
+                                <label for="">PLL</label>
+                            </span>
+                            <span class="con">
+                                <input type="text" value="Enable">
+                            </span>
+                        </li>
+                        <li>
+                            <span class="tit">
+                                <label for="">Capacitive Compensation</label>
+                            </span>
+                            <span class="con">
+                                <input type="text" value="Enable">
+                            </span>
+                        </li>
+                        <li>
+                            <span class="tit">
+                                <label for="">DYN11 / DYV12 / YYN</label>
+                            </span>
+                            <span class="con">
+                                <input type="text" value="YYN">
+                            </span>
+                        </li>
+                        <li>
+                            <span class="tit">
+                                <label for="">Temperature Derating</label>
+                            </span>
+                            <span class="con">
+                                <input type="text" value="Enable">
+                            </span>
+                        </li>
+                        <li>
+                            <span class="tit">
+                                <label for="">Cabinet number</label>
+                            </span>
+                            <span class="con">
+                                <input type="text" value="1.0">
+                            </span>
+                        </li>
+                        <li>
+                            <span class="tit">
+                                <label for="">Fan Gear</label>
+                            </span>
+                            <span class="con">
+                                <input type="text" value="1.0">
+                            </span>
+                        </li>
+                        <li>
+                            <span class="tit">
+                                <label for="">Network Config</label>
+                            </span>
+                            <span class="con">
+                                <select name="" id="">
+                                    <option value="">3P3W</option>
+                                </select>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="tit">
+                                <label for="">Target Voltage</label>
+                            </span>
+                            <span class="con">
+                                <input type="text" value="230.0">
+                            </span>
+                        </li>
+                        <li>
+                            <span class="tit">
+                                <label for="">THDU Limit(%)</label>
+                            </span>
+                            <span class="con">
+                                <input type="text" value="0.0">
+                            </span>
+                        </li>
+                        <li>
+                            <span class="tit">
+                                <label for="">Unbalance Limit</label>
+                            </span>
+                            <span class="con">
+                                <input type="text" value="0.0">
+                            </span>
+                        </li>
+                    </ul>
+                </form>
+            </div>
+        </article><!-- //contents -->
+    </section>
+</div>
+
+</body>
+</html>

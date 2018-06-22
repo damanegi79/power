@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="Author" content="" />
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1,user-scalable=no" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+<!--[if lt IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+<![endif]-->
+<title>HMI 파워닉스</title>
+<link rel="stylesheet" href="../css/style.css" />
+<script src="../js/jquery-1.9.1.min.js"></script>
+<script src="../js/ui.js" ></script>
+</head>
+
+<body>
+<div id="wrapper">
+    <header id="header" class="clearfix"><!-- header -->
+        <div class="headerTop">
+            <h1><a href="#"><img src="../img/img_logo.png" alt="파워닉스"></a></h1>
+            <aside class="adminInfo clearfix">
+                <p class="adminLine"><span class="user"></span><a href="#">LOGOUT</a></p>
+                <p class="date">2018.03.12 | 13:45:32</p>
+            </aside>
+            <nav id="gnb">
+                <ul class="clearfix">
+                    <li>
+                        <a href="#">메인</a>
+                    </li>
+                    <li>
+                        <a href="#">감시</a>
+                        <div class="subNav">
+                            <ul class="clearfix">
+                                <li><a href="#">데이터</a></li>
+                                <li class="active"><a href="#">고조파</a></li>
+                                <li><a href="#">파워</a></li>
+                                <li><a href="#">I/O</a></li>
+                                <li><a href="#">그래프</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">설정</a>
+                        <div class="subNav">
+                            <ul class="clearfix">
+                                <li><a href="#">일반</a></li>
+                                <li><a href="#">추가</a></li>
+                                <li><a href="#">통신</a></li>
+                                <li><a href="#">고급</a></li>
+                                <li><a href="#">고조파</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">기록</a>
+                        <div class="subNav">
+                            <ul class="clearfix">
+                                <li><a href="#">실시간</a></li>
+                                <li><a href="#">과거</a></li>
+                                <li><a href="#">동작</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">정보</a>
+                        <div class="subNav">
+                            <ul class="clearfix">
+                                <li><a href="#">시스템</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header><!-- //header -->
+    <section id="contentsArea">
+        <div class="icoInfo clearfix">
+            <ul class="clearfix">
+                <li><a href="#"><img src="../img/ico_info01.png" alt="">AHF</a></li>
+                <li><a href="#"><img src="../img/ico_info02.png" alt="">SVG</a></li>
+                <li><a href="#"><img src="../img/ico_info03.png" alt="">감시</a></li>
+            </ul>
+        </div>
+        <ul class="selectMode">
+            <li><input type="checkbox" id="ahf"><label for="ahf">AHF Online</label></li>
+            <li><input type="checkbox" id="svg" checked><label for="svg">SVG Offline</label></li>
+        </ul>
+        <article id="contents"> <!-- contents -->
+            <div class="dataBlock">
+                <div class="blockTitle">
+                    <dl class="selectChart">
+                        <dt><span>THDI R</span><img src="../img/img_arrow.png" alt=""></dt>
+                        <dd>
+                            <ul>
+                                <li><a href="#">THDI S</a></li>
+                                <li><a href="#">THDI T</a></li>
+                                <li><a href="#">THDU R</a></li>
+                                <li><a href="#">THDU S</a></li>
+                                <li><a href="#">THDU T</a></li>
+                            </ul>
+                        </dd>
+                    </dl>
+                </div>
+                <div class="blockCon">
+                    <div class="chart_th chartBox ">
+                        <img src="../img/thumb/@img_chart_thdi.png" alt="">
+                    </div>
+                    <p class="chart_th_info"><img src="../img/img_chart_thdi_info.png" alt=""></p>
+                    <p class="textb mT30">HARMONIC</p>
+                </div>
+            </div>
+        </article><!-- //contents -->
+    </section>
+</div>
+
+</body>
+</html>

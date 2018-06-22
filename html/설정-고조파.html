@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="Author" content="" />
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1,user-scalable=no" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+<!--[if lt IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+<![endif]-->
+<title>HMI 파워닉스</title>
+<link rel="stylesheet" href="../css/style.css" />
+<script src="../js/jquery-1.9.1.min.js"></script>
+<script src="../js/ui.js" ></script>
+</head>
+
+<body>
+<div id="wrapper">
+    <header id="header" class="clearfix"><!-- header -->
+        <div class="headerTop">
+            <h1><a href="#"><img src="../img/img_logo.png" alt="파워닉스"></a></h1>
+            <aside class="adminInfo clearfix">
+                <p class="adminLine"><span class="user"></span><a href="#">LOGOUT</a></p>
+                <p class="date">2018.03.12 | 13:45:32</p>
+            </aside>
+            <nav id="gnb">
+                <ul class="clearfix">
+                    <li>
+                        <a href="#">메인</a>
+                    </li>
+                    <li>
+                        <a href="#">감시</a>
+                        <div class="subNav">
+                            <ul class="clearfix">
+                                <li><a href="#">데이터</a></li>
+                                <li><a href="#">고조파</a></li>
+                                <li><a href="#">파워</a></li>
+                                <li><a href="#">온도</a></li>
+                                <li><a href="#">그래프</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">설정</a>
+                        <div class="subNav">
+                            <ul class="clearfix">
+                                <li><a href="#">일반</a></li>
+                                <li><a href="#">추가</a></li>
+                                <li><a href="#">통신</a></li>
+                                <li><a href="#">고급</a></li>
+                                <li class="active"><a href="#">고조파</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">기록</a>
+                        <div class="subNav">
+                            <ul class="clearfix">
+                                <li><a href="#">실시간</a></li>
+                                <li><a href="#">과거</a></li>
+                                <li><a href="#">동작</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">정보</a>
+                        <div class="subNav">
+                            <ul class="clearfix">
+                                <li><a href="#">시스템</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header><!-- //header -->
+    <section id="contentsArea">
+        <div class="icoInfo clearfix">
+            <ul class="clearfix">
+                <li><a href="#"><img src="../img/ico_info01.png" alt="">AHF</a></li>
+                <li><a href="#"><img src="../img/ico_info02.png" alt="">SVG</a></li>
+                <li><a href="#"><img src="../img/ico_info03.png" alt="">감시</a></li>
+            </ul>
+        </div>
+        <ul class="selectMode">
+            <li><input type="checkbox" id="ahf"><label for="ahf">AHF Online</label></li>
+            <li><input type="checkbox" id="svg" checked><label for="svg">SVG Offline</label></li>
+        </ul>
+        <article id="contents"> <!-- contents -->
+            <div class="setupArea">
+                <form name="" method="post" action="">
+                    <div class="goList clearfix">
+                        <div class="dataBlock">
+                            <div class="blockTitle">
+                                <h3>2 - 50차 선택</h3>
+                            </div>
+                            <div class="blockCon">
+                                <ul>
+                                    <li><input type="text" value="4차"></li>
+                                    <li><input type="text" value="5차"></li>
+                                    <li><input type="text" value="6차"></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="dataBlock fR">
+                            <div class="blockTitle">
+                                <h3>AHF 고조파 설정(%)</h3>
+                            </div>
+                            <div class="blockCon">
+                                <ul>
+                                    <li><input type="text" value="99"></li>
+                                    <li><input type="text" value="100"></li>
+                                    <li><input type="text" value="0"></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="btnSetup"><button type="button" class="btn btn-m btn-l">설정</button></p>
+                    <div class="numSetUp">
+                        <h3>설정한 주파수가 표시됩니다.</h3>
+                        <table>
+                            <caption>주파수 설정</caption>
+                            <colgroup>
+                                <col style="width:8.33%;">
+                                <col style="width:8.33%;">
+                                <col style="width:8.33%;">
+                                <col style="width:8.33%;">
+                                <col style="width:8.33%;">
+                                <col style="width:8.33%;">
+                                <col style="width:8.33%;">
+                                <col style="width:8.33%;">
+                                <col style="width:8.33%;">
+                                <col style="width:8.33%;">
+                                <col style="width:8.33%;">
+                                <col style="width:8.33%;">
+                            </colgroup>
+                            <tr>
+                                <th>2차</th><td><input type="text" value="0"></td>
+                                <th>3차</th><td><input type="text" value="0"></td>
+                                <th>4차</th><td><input type="text" value="0"></td>
+                                <th>5차</th><td><input type="text" value="0"></td>
+                                <th>6차</th><td><input type="text" value="0"></td>
+                                <th>7차</th><td><input type="text" value="0"></td>
+                            </tr>
+                            <tr>
+                                <th>8차</th><td><input type="text" value="0"></td>
+                                <th>9차</th><td><input type="text" value="0"></td>
+                                <th>10차</th><td><input type="text" value="0"></td>
+                                <th>11차</th><td><input type="text" value="0"></td>
+                                <th>12차</th><td><input type="text" value="0"></td>
+                                <th>13차</th><td><input type="text" value="0"></td>
+                            </tr>
+                            <tr>
+                                <th>14차</th><td><input type="text" value="0"></td>
+                                <th>15차</th><td><input type="text" value="0"></td>
+                                <th>16차</th><td><input type="text" value="0"></td>
+                                <th>17차</th><td><input type="text" value="0"></td>
+                                <th>18차</th><td><input type="text" value="0"></td>
+                                <th>19차</th><td><input type="text" value="0"></td>
+                            </tr>
+                            <tr>
+                                <th>20차</th><td><input type="text" value="0"></td>
+                                <th>21차</th><td><input type="text" value="0"></td>
+                                <th>22차</th><td><input type="text" value="0"></td>
+                                <th>23차</th><td><input type="text" value="0"></td>
+                                <th>24차</th><td><input type="text" value="0"></td>
+                                <th>25차</th><td><input type="text" value="0"></td>
+                            </tr>
+                            <tr>
+                                <th>26차</th><td><input type="text" value="0"></td>
+                                <th>27차</th><td><input type="text" value="0"></td>
+                                <th>28차</th><td><input type="text" value="0"></td>
+                                <th>29차</th><td><input type="text" value="0"></td>
+                                <th>30차</th><td><input type="text" value="0"></td>
+                                <th>31차</th><td><input type="text" value="0"></td>
+                            </tr>
+                            <tr>
+                                <th>32차</th><td><input type="text" value="0"></td>
+                                <th>33차</th><td><input type="text" value="0"></td>
+                                <th>34차</th><td><input type="text" value="0"></td>
+                                <th>35차</th><td><input type="text" value="0"></td>
+                                <th>36차</th><td><input type="text" value="0"></td>
+                                <th>37차</th><td><input type="text" value="0"></td>
+                            </tr>
+                            <tr>
+                                <th>38차</th><td><input type="text" value="0"></td>
+                                <th>39차</th><td><input type="text" value="0"></td>
+                                <th>40차</th><td><input type="text" value="0"></td>
+                                <th>41차</th><td><input type="text" value="0"></td>
+                                <th>42차</th><td><input type="text" value="0"></td>
+                                <th>43차</th><td><input type="text" value="0"></td>
+                            </tr>
+                            <tr>
+                                <th>44차</th><td><input type="text" value="0"></td>
+                                <th>45차</th><td><input type="text" value="0"></td>
+                                <th>46차</th><td><input type="text" value="0"></td>
+                                <th>47차</th><td><input type="text" value="0"></td>
+                                <th>48차</th><td><input type="text" value="0"></td>
+                                <th>49차</th><td><input type="text" value="0"></td>
+                            </tr>
+                            <tr>
+                                <th>50차</th><td><input type="text" value="0"></td>
+                                <th></th><td></td>
+                                <th></th><td></td>
+                                <th></th><td></td>
+                                <th></th><td></td>
+                                <th></th><td></td>
+                            </tr>
+                        </table>
+                    </div>
+                </form>
+            </div>
+        </article><!-- //contents -->
+    </section>
+</div>
+
+</body>
+</html>

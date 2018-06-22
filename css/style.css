@@ -1,6 +1,6 @@
 @import url(reset.css);
 @import url(../fonts/NanumBarunGothic/css/NanumBarunGothic.css);
-@import url(//fonts.googleapis.com/css?family=Lato:100,400,700);
+@import url('https://fonts.googleapis.com/css?family=Lato:100,400,700');
 /* form */
 select{border: 1px solid #d9d9d9; height:34px; padding-left: 15px; color: #666666; /*-webkit-appearance: none; -moz-appearance: none; appearance: none;*/ position: relative; z-index: 10; background: none; font-size: 15px; border-radius: 3px; /*background: url(../img/bg_appearance.png) no-repeat right center;*/}
 select::-ms-expand {display: none;}
@@ -147,6 +147,7 @@ body{font-family:'Lato','Nanum Barun Gothic','dotum',Arial,Verdana, Helvetica, s
 .dataBlock .blockTitle .selectChart dt img{margin-left: 20px;}
 .dataBlock .blockTitle .selectChart dt span{display: inline-block;}
 .dataBlock .blockTitle .selectChart dt span.ico{position: absolute; left:0px; top: 6px;}
+.dataBlock .blockTitle .selectChart dt input[type=text]{font-size: 18px; font-weight: 200; background:none; color: #fff; text-align: center; display: inline-block; height: 45px; border: none; padding: 0; box-sizing: border-box; width: 100%; float: left; background: url(../img/ico_arrow_down.png) no-repeat right 20px center;}
 .dataBlock .blockTitle .selectChart dd {background: rgba(0,0,0,0.9); padding: 0 20px; display: none;}
 .dataBlock .blockTitle .selectChart dd ul li{border-top: 1px solid rgba(255,255,255,0.05)}
 .dataBlock .blockTitle .selectChart dd ul li:first-child{border: none;}
@@ -161,7 +162,8 @@ body{font-family:'Lato','Nanum Barun Gothic','dotum',Arial,Verdana, Helvetica, s
 .dataBlock .blockCon:after{content: ""; display: block; clear: both;}
 
 .setupArea {padding-top: 20px;}
-.setupArea select{width: 100%; height: 68px; color: #fff; font-size: 30px; font-weight: 400; -webkit-appearance: none; appearance: none; padding-left: 20px; background: url(../img/img_arrow.png) no-repeat right 20px center; border: none;}
+.setupArea select{width: 100%; height: 68px; font-size: 30px; font-weight: 400; -webkit-appearance: none; appearance: none; padding-left: 20px; background: url(../img/img_arrow.png) no-repeat right 20px center; border: none; color: #fff;}
+.setupArea select option{color: #000;}
 .setupArea input{width: 100%; height: 68px; background: none; color: #fff; font-size: 30px; font-weight: 200; padding-left: 20px; border: none;}
 .setupArea dl.setUp dt:after,.setupArea .setUp dd:after{content: ""; display: block; clear: both;}
 .setupArea dl.setUp dt{background-color: #161824;}
